@@ -12,3 +12,4 @@ Knee MRI reconstruction at 4x acceleration on fastMRI singlecoil data.
 | **LISTA (T=10)** | **28.19** | **0.5608** |
 
 ### Note: change the line 31 with your own directory
+### Further improvement: consider changing to a smaller lambda.
