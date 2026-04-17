@@ -1,6 +1,6 @@
 # 7503gp
 
-## Results in mri_full_2.py
+## Results
 
 Knee MRI reconstruction at 4x acceleration on fastMRI singlecoil data.
 
@@ -13,3 +13,4 @@ Knee MRI reconstruction at 4x acceleration on fastMRI singlecoil data.
 
 ### Note: change the line 31 with your own directory
 ### Further improvement: consider changing to a smaller lambda.
+The other images and plots are also results from *mri_full_2.py*
