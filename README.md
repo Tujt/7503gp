@@ -13,7 +13,7 @@ Knee MRI reconstruction at 4x acceleration on fastMRI singlecoil data.
 
 ### Note: change the line 31 with your own directory
 ### Further improvement: consider changing to a smaller lambda.
-The other images and plots are also results from `mri_full_2.py`
+`convergence_mri.png` lista_training_loss.png` `visual_comparison.png` are also results from `mri_full_2.py`
 
 ## Results for `at_lista.py`
 
@@ -26,3 +26,4 @@ Knee MRI reconstruction at 4x acceleration on fastMRI singlecoil data.
 | **AT-LISTA (T=10)** | **110,290** | **28.22** | **0.5624** |
 
 ### Note: change line 28 with your own directory
+`error_maps.png`,`lista_vs_atlista.png`, and `training_loss_comparison_atlista.png` are results from `at_lista.py`
