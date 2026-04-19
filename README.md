@@ -13,4 +13,16 @@ Knee MRI reconstruction at 4x acceleration on fastMRI singlecoil data.
 
 ### Note: change the line 31 with your own directory
 ### Further improvement: consider changing to a smaller lambda.
-The other images and plots are also results from *mri_full_2.py*
+The other images and plots are also results from `mri_full_2.py`
+
+## Results for `at_lista.py`
+
+Knee MRI reconstruction at 4x acceleration on fastMRI singlecoil data.
+
+| Method | Params | PSNR (dB) | SSIM |
+|---|---|---|---|
+| Zero-filled | — | 26.94 | 0.5525 |
+| LISTA (T=10) | 104,340 | 28.16 | 0.5614 |
+| **AT-LISTA (T=10)** | **110,290** | **28.22** | **0.5624** |
+
+### Note: change line 28 with your own directory
