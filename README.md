@@ -1,29 +1,29 @@
-# 7503gp
+# Algorithm Unrolling for MRI Reconstruction
+
+Final project for MATH 7503. We compare classical iterative methods with learned unrolling approaches on the fastMRI knee dataset (4× acceleration).
+
+## Methods
+
+- **Zero-filled** — baseline
+- **ISTA** — iterative shrinkage-thresholding (wavelet)
+- **FISTA-TV** — accelerated ISTA with total variation
+- **LISTA** — learned unrolled ISTA (T=10 layers)
+- **AT-LISTA** — attention-enhanced LISTA
 
 ## Results
 
-Knee MRI reconstruction at 4x acceleration on fastMRI singlecoil data.
-
 | Method | PSNR (dB) | SSIM |
-|---|---|---|
+|--------|-----------|------|
 | Zero-filled | 26.94 | 0.5525 |
-| ISTA (100 iter) | 26.72 | 0.5181 |
-| FISTA (100 iter) | 26.30 | 0.4848 |
-| **LISTA (T=10)** | **28.19** | **0.5608** |
+| ISTA (wavelet) | 26.89 | 0.5409 |
+| FISTA-TV | 27.09 | 0.4430 |
+| LISTA (CNN) | 28.18 | 0.5618 |
+| **AT-LISTA** | **28.21** | **0.5662** |
 
-### Note: change the line 31 with your own directory
-### Further improvement: consider changing to a smaller lambda.
-`convergence_mri.png` lista_training_loss.png` `visual_comparison.png` are also results from `mri_full_2.py`
+Learned unrolling (LISTA/AT-LISTA) outperforms classical methods by ~1.3 dB PSNR. AT-LISTA achieves the best performance on both metrics.
 
-## Results for `at_lista.py`
+## Figures
 
-Knee MRI reconstruction at 4x acceleration on fastMRI singlecoil data.
-
-| Method | Params | PSNR (dB) | SSIM |
-|---|---|---|---|
-| Zero-filled | — | 26.94 | 0.5525 |
-| LISTA (T=10) | 104,340 | 28.16 | 0.5614 |
-| **AT-LISTA (T=10)** | **110,290** | **28.22** | **0.5624** |
-
-### Note: change line 28 with your own directory
-`error_maps.png`,`lista_vs_atlista.png`, and `training_loss_comparison_atlista.png` are results from `at_lista.py`
+![Visual Comparison](visual_comparison.png)
+![PSNR vs Iteration](convergence_mri.png)
+![Training Loss](training_loss_comparison.png)
